@@ -43,6 +43,7 @@ Whether you're exploring AI-powered assistants or looking to integrate language 
 - Access to the **Ollama Gemma2:2b** model 🤖  
 
 ## 📂 Project Structure
+
 ├── app.py               # Main application file
 ├── requirements.txt     # Dependencies for the project
 ├── .env                 # Environment variables (not included in the repository)
