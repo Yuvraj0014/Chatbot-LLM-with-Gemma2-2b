@@ -42,6 +42,11 @@ Whether you're exploring AI-powered assistants or looking to integrate language 
 - [LangChain](https://langchain.com/) library 🔗  
 - Access to the **Ollama Gemma2:2b** model 🤖  
 
+## 📂 Project Structure
+├── app.py               # Main application file
+├── requirements.txt     # Dependencies for the project
+├── .env                 # Environment variables (not included in the repository)
+
 ### 📦 Installation
 
 1. Clone the Repository:
@@ -71,11 +76,6 @@ streamlit run app.py
 1. Open the application in your browser (http://localhost:8501 by default). 🌍
 2. Enter a question in the input box. ❓💬
 3. Receive intelligent responses from the chatbot! ⚡🤖
-
-## 📂 Project Structure
--app.py: 💡 The heart of the project, integrating LangChain, Streamlit, and Gemma2:2b.
--.env: 🔐 Configuration file for environment variables (excluded from version control).
--requirements.txt: 📜 A list of required dependencies.
 
 ## 💻 Technologies Used
 1. LangChain: 🧠 For managing and tracking language model chains.
@@ -109,14 +109,10 @@ The chatbot's output prediction involves the following steps:
 This chain of operations ensures that the chatbot provides relevant and context-aware answers in real-time, making the interaction seamless and intuitive.
 
 
-## 📜 License
-This project is licensed under the MIT License. 📝
-Feel free to use, modify, and share! ✨
-
 ## Output Screens and Monitoring Panel
 
 ![alt text](image-2.png)
 
-![alt text](image.png)
-
 ![alt text](image-1.png)
+
+
