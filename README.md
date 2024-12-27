@@ -44,7 +44,7 @@ Whether you're exploring AI-powered assistants or looking to integrate language 
 
 ### 📦 Installation
 
-1. Clone the Repository**:
+1. Clone the Repository:
 ```bash
 git clone https://github.com/Yuvraj0014/Chatbot-LLM-with-Gemma2-2b.git
 cd Chatbot-LLM-with-Gemma2-2b
