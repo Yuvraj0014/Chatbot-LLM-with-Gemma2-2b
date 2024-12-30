@@ -128,6 +128,26 @@ Features:
 - Performance monitoring
 - Reliable operation
 
+## Note
+I have used Gemma2-2b model integration of multiple models is possible
+
+I have only used gemma2:2b model but you can install and add all the models mentioned in
+Here's a list of popular Ollama models that can be added to QueryGenie:
+1.	Llama2 Models:
+-	llama2
+-	llama2:13b
+-	llama2:70b
+2.	Mistral Models:
+-	mistral
+-	mixtral
+3.	OpenHermes Models:
+-	openhermes:7b
+-	openhermes:mistral
+4.	CodeLlama Models:
+-	codellama
+-	codellama:13b
+-	codellama:34b
+
 ## 📸 Application Interface
 [Interface screenshot placeholder]
 
@@ -138,6 +158,7 @@ Features:
 ![alt text](image-5.png)
 
 ## Tracking and Debugging
+
 ![alt text](image-2.png)
 
 ![alt text](image-1.png)
