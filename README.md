@@ -1,119 +1,143 @@
-# 🌟 Langchain Chatbot with Gemma Model 🌟
+# 🧞 QueryGenie: Intelligent Question Answering with LLMs
 
-## 📖 Project Overview
+## 🎯 About QueryGenie
 
-The **Langchain Chatbot with Gemma Model** is an intelligent chatbot application built using the LangChain framework, Streamlit for UI, and the powerful Gemma2:2b large language model from Ollama. This project demonstrates the potential of combining advanced language models with interactive user interfaces to deliver quick and accurate responses to user queries.
+QueryGenie is an advanced question-answering system powered by Large Language Models through Langchain and Ollama. It provides an intuitive interface for seamless interaction with AI models to receive intelligent, contextual responses.
 
-The chatbot is designed with a modular architecture, making it easy to extend or adapt for various use cases such as virtual assistants, customer support, or educational tools. It also leverages environment-based configurations for a secure and scalable setup.
+### Key Features:
+- **Smart Interface**: Streamlit-based UI for effortless interaction
+- **Model Flexibility**: Multiple Ollama model support
+- **Customizable Parameters**: Adjustable temperature and token settings
+- **Performance Tracking**: LangSmith integration
+- **Real-time Processing**: Instant query responses
 
-Key Highlights:
-- Seamless integration of LangChain for prompt engineering and chaining mechanisms.
-- Utilization of the cutting-edge Gemma2:2b LLM to ensure high-quality answers.
-- Interactive web application built using Streamlit for ease of use.
+## 🔍 Project Overview
 
-Whether you're exploring AI-powered assistants or looking to integrate language models into your workflow, this project provides a robust foundation for innovation. 🌟
+QueryGenie implements a sophisticated Q&A system using cutting-edge language models, combining advanced prompt engineering with robust model integration for accurate, contextual responses.
 
----
+### 🛠️ Technical Architecture
 
-## ✨ Features
+1. **Frontend Layer**:
+   - Streamlit interface
+   - Dynamic parameter controls
+   - Real-time responses
+   - Model selection
 
-- **🖥️ Streamlit Interface**: A sleek, interactive web interface for seamless user interaction.  
-- **🤖 Gemma2 Model**: Powered by the **Ollama** LLM for precise and insightful responses.  
-- **🔗 LangChain Integration**: Advanced prompt engineering and chaining for dynamic query handling.  
-- **🔒 Secure Configurations**: Modular and secure setup using `.env` files for environment variables.  
+2. **Processing Layer**:
+   - Langchain templates
+   - Ollama integration
+   - Response parsing
+   - LangSmith tracking
 
----
+## 💻 Requirements
 
-## 🛠️ Requirements
-1. langchain
-2. python-dotenv
-3. langchain-community
-4. langchain-core
-5. streamlit
+1. langchain-openai
+2. langchain
+3. python-dotenv
+4. langchain-community
+5. langchain-core
+6. streamlit
 
----
+## Installation
 
-## 🛠️ Installation and Setup
-
-### 🔑 Prerequisites
-
-- Python 3.7 or higher 🐍  
-- [Streamlit](https://streamlit.io/) library 🌐  
-- [LangChain](https://langchain.com/) library 🔗  
-- Access to the **Ollama Gemma2:2b** model 🤖  
-
-## 📂 Project Structure
-```
-├── app.py               # Main application file
-├── requirements.txt     # Dependencies for the project
-├── .env                 # Environment variables (not included in the repository)
-```
-### 📦 Installation
-
-1. Clone the Repository:
+1. Clone repository:
 ```bash
 git clone https://github.com/Yuvraj0014/Chatbot-LLM-with-Gemma2-2b.git
 cd Chatbot-LLM-with-Gemma2-2b
 ```
 
-2. Setup a virtual environment (optional but recommended)
+2. Setup environment:
 ```cmd
 python -m venv venv
 source venv/bin/activate  # For Linux/MacOS
 venv\Scripts\activate  # For Windows
 ```
 
-3. Install required dependencies
+3. Install dependencies:
 ```cmd
 pip install -r requirements.txt
 ```
 
-4. Run the streamlit app
+4. Launch:
 ```cmd
 streamlit run app.py
 ```
 
-## 🌐 Usage
-1. Open the application in your browser (http://localhost:8501 by default). 🌍
-2. Enter a question in the input box. ❓💬
-3. Receive intelligent responses from the chatbot! ⚡🤖
+## Results 
+Access demo:
+```
+querygenie.streamlit.app
+```
 
-## 💻 Technologies Used
-1. LangChain: 🧠 For managing and tracking language model chains.
-2. Streamlit: 🌟 For building an interactive and user-friendly interface.
-3. Ollama Gemma2:2b: 🤖 The brain behind the chatbot's responses.
-4. Python: 🐍 The programming language that ties it all together.
+### 💻 How It Works
 
-## 🔍 How Output Prediction is Done
+1. **Query Processing**:
+   - User input through Streamlit
+   - Processing via Langchain template
+   - Parameter application
 
-The chatbot's output prediction involves the following steps:
+2. **Processing Steps**:
+   ```python
+   # Query flow
+   - Template formatting
+   - Parameter application
+   - Ollama model processing
+   - Response parsing
+   ```
 
-1. **User Input**:
-   - The user types a question into the input field provided by the Streamlit application.
+3. **Response Generation**:
+   - Model query processing
+   - Temperature control
+   - Token management
+   - Response formatting
 
-2. **Prompt Engineering**:
-   - The question is processed using a predefined **LangChain Prompt Template**. 
-   - This template includes a structured format to guide the language model, such as:
-     - A **system message**: "You are a helpful assistant. Please respond to the question asked."
-     - A **user message**: The actual question input by the user.
+4. **Results Display**:
+   - Clear response presentation
+   - Confidence indicators
+   - Parameter display
+   - Conversation history
 
-3. **Model Invocation**:
-   - The processed prompt is passed to the **Gemma2:2b** model, which is accessed via the Ollama API.
-   - The model generates a response by leveraging its pre-trained knowledge and reasoning capabilities.
+### 🎯 Output Interpretation
 
-4. **Output Parsing**:
-   - The response generated by the model is parsed using the **String Output Parser** from LangChain to ensure it is in a user-friendly format.
+1. **Direct Responses**:
+   ```
+   Question: What is artificial intelligence?
+   Response: [Generated explanation with parameters]
+   ```
 
-5. **Display Results**:
-   - The parsed output is displayed on the Streamlit interface, providing the user with an answer to their query.
+2. **System Info**:
+   ```
+   📊 Parameters
+   Model: gemma2:2b
+   Temperature: 0.7
+   Max Tokens: 150
+   ```
 
-This chain of operations ensures that the chatbot provides relevant and context-aware answers in real-time, making the interaction seamless and intuitive.
+### 🎓 Use Cases
 
+- **Research**: Information access
+- **Education**: Learning support
+- **Documentation**: Technical understanding
+- **Knowledge Base**: General queries
 
-## Output Screens and Monitoring Panel
+## 📊 System Performance
 
-![alt text](image-3.png)
+Features:
+- Fast response generation
+- Parameter customization
+- Performance monitoring
+- Reliable operation
 
+## 📸 Application Interface
+[Interface screenshot placeholder]
+
+## 🎯 Output Screen
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+## Tracking and Debugging
 ![alt text](image-2.png)
 
 ![alt text](image-1.png)
