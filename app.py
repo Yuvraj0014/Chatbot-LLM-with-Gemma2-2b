@@ -4,45 +4,59 @@ from langchain_community.llms import Ollama
 import streamlit as st
 import os
 
-import os
-from dotenv import load_dotenv
-load_dotenv()
+# Initialize session state for API key if not already present
+if 'api_key_configured' not in st.session_state:
+    st.session_state.api_key_configured = False
 
-## Langsmith Tracking
-os.environ["LANGCHAIN_API_KEY"]=os.getenv("LANGCHAIN_API_KEY")
-os.environ["LANGCHAIN_TRACING_V2"]="true"
-os.environ["LANGCHAIN_PROJECT"]="pr-rundown-stab-27"
+# Sidebar for API configuration
+st.sidebar.header("API Configuration")
 
-## Prompt Template
-prompt=ChatPromptTemplate.from_messages(
-    [
-        ("system","You are a helpful assistant. Please respond to the user queries"),
-         ("user","Question:{question}")
-    ]
-)
-## Function that interacts with my openai LLM models
-def generate_response(question,engine,temperature,max_tokens):
+# API key input in sidebar
+langchain_api_key = st.sidebar.text_input("Enter your Langchain API Key", type="password")
 
-    llm=Ollama(model=engine)
-    output_parser=StrOutputParser()
-    chain=prompt|llm|output_parser
-    answer=chain.invoke({"question":question})
+# Button to save API key
+if st.sidebar.button("Save API Key"):
+    if langchain_api_key:
+        os.environ["LANGCHAIN_API_KEY"] = langchain_api_key
+        os.environ["LANGCHAIN_TRACING_V2"] = "true"
+        os.environ["LANGCHAIN_PROJECT"] = "pr-rundown-stab-27"
+        st.session_state.api_key_configured = True
+        st.sidebar.success("API Key saved successfully!")
+    else:
+        st.sidebar.error("Please enter an API key")
+
+# Prompt Template
+prompt = ChatPromptTemplate.from_messages([
+    ("system", "You are a helpful assistant. Please respond to the user queries"),
+    ("user", "Question:{question}")
+])
+
+def generate_response(question, engine, temperature, max_tokens):
+    llm = Ollama(model=engine)
+    output_parser = StrOutputParser()
+    chain = prompt | llm | output_parser
+    answer = chain.invoke({"question": question})
     return answer
 
-## Select Open AI model
-engine=st.sidebar.selectbox("Select an Open AI Model",["gemma2:2b"])
+# Main app interface
+st.title("🧞 QueryGenie: Intelligent Question Answering with LLMs ")
 
-## Adjust response parameter
-temperature=st.sidebar.slider("Temperature",min_value=0.0,max_value=1.0,value=0.7)
-max_tokens = st.sidebar.slider("max_Tokens",min_value=50, max_value=300,value=150)
+# Model selection and parameters in sidebar
+st.sidebar.header("Model Configuration")
+engine = st.sidebar.selectbox("Select an Open AI Model", ["gemma2:2b"])
+temperature = st.sidebar.slider("Temperature", min_value=0.0, max_value=1.0, value=0.7)
+max_tokens = st.sidebar.slider("max_Tokens", min_value=50, max_value=300, value=150)
 
-## Main interface for user input
+# Main interface for user input
 st.write("Go ahead and ask any question")
-user_input=st.text_input("You:")
+user_input = st.text_input("You:")
 
-if user_input :
-    response=generate_response(user_input,engine,temperature,max_tokens)
-    st.write(response)
+# Generate response only if API key is configured and there's user input
+if user_input:
+    if st.session_state.api_key_configured:
+        response = generate_response(user_input, engine, temperature, max_tokens)
+        st.write(response)
+    else:
+        st.error("Please configure your API key in the sidebar first")
 else:
     st.write("Please provide the user input")
-

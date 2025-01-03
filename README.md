@@ -2,9 +2,10 @@
 
 ## 🎯 About QueryGenie
 
-QueryGenie is an advanced question-answering system powered by Large Language Models through Langchain and Ollama. It provides an intuitive interface for seamless interaction with AI models to receive intelligent, contextual responses.
+QueryGenie is an advanced question-answering system powered by Large Language Models through Langchain and Ollama. It provides an intuitive interface for seamless interaction with AI models to receive intelligent, contextual responses, with secure API key management through the Streamlit interface.
 
 ### Key Features:
+- **Secure API Management**: In-app API key configuration
 - **Smart Interface**: Streamlit-based UI for effortless interaction
 - **Model Flexibility**: Multiple Ollama model support
 - **Customizable Parameters**: Adjustable temperature and token settings
@@ -18,12 +19,13 @@ QueryGenie implements a sophisticated Q&A system using cutting-edge language mod
 ### 🛠️ Technical Architecture
 
 1. **Frontend Layer**:
-   - Streamlit interface
+   - Streamlit interface with API key management
    - Dynamic parameter controls
    - Real-time responses
    - Model selection
 
 2. **Processing Layer**:
+   - Secure API key handling
    - Langchain templates
    - Ollama integration
    - Response parsing
@@ -33,10 +35,9 @@ QueryGenie implements a sophisticated Q&A system using cutting-edge language mod
 
 1. langchain-openai
 2. langchain
-3. python-dotenv
-4. langchain-community
-5. langchain-core
-6. streamlit
+3. langchain-community
+4. langchain-core
+5. streamlit
 
 ## Installation
 
@@ -69,16 +70,25 @@ Access demo:
 querygenie.streamlit.app
 ```
 
+## 🚀 Getting Started
+
+1. Launch the application
+2. Enter your Langchain API key in the sidebar
+3. Click "Save API Key" to configure the environment
+4. Select your preferred model and parameters
+5. Start asking questions!
+
 ### 💻 How It Works
 
-1. **Query Processing**:
-   - User input through Streamlit
-   - Processing via Langchain template
-   - Parameter application
+1. **API Configuration**:
+   - Secure API key input through Streamlit
+   - Environment variable configuration
+   - Session state management
 
-2. **Processing Steps**:
+2. **Query Processing**:
    ```python
    # Query flow
+   - API validation
    - Template formatting
    - Parameter application
    - Ollama model processing
@@ -93,72 +103,65 @@ querygenie.streamlit.app
 
 4. **Results Display**:
    - Clear response presentation
-   - Confidence indicators
    - Parameter display
    - Conversation history
+   - API configuration status
 
-### 🎯 Output Interpretation
+### 🎯 Supported Models
 
-1. **Direct Responses**:
-   ```
-   Question: What is artificial intelligence?
-   Response: [Generated explanation with parameters]
-   ```
+Currently implemented models:
+- gemma2:2b
 
-2. **System Info**:
-   ```
-   📊 Parameters
-   Model: gemma2:2b
-   Temperature: 0.7
-   Max Tokens: 150
-   ```
+Additional models that can be integrated:
+1. Llama2 Models:
+   - llama2
+   - llama2:13b
+   - llama2:70b
+2. Mistral Models:
+   - mistral
+   - mixtral
+3. OpenHermes Models:
+   - openhermes:7b
+   - openhermes:mistral
+4. CodeLlama Models:
+   - codellama
+   - codellama:13b
+   - codellama:34b
 
-### 🎓 Use Cases
+### 🎯 Use Cases
 
 - **Research**: Information access
 - **Education**: Learning support
 - **Documentation**: Technical understanding
 - **Knowledge Base**: General queries
 
-## 📊 System Performance
+## 📊 System Features
 
-Features:
+- Secure API key management
 - Fast response generation
 - Parameter customization
 - Performance monitoring
 - Reliable operation
+- Session state persistence
 
-## Note
-I have used Gemma2-2b model integration of multiple models is possible
+## Security Note
 
-I have only used gemma2:2b model but you can install and add all the models mentioned in
-Here's a list of popular Ollama models that can be added to QueryGenie:
-1.	Llama2 Models:
--	llama2
--	llama2:13b
--	llama2:70b
-2.	Mistral Models:
--	mistral
--	mixtral
-3.	OpenHermes Models:
--	openhermes:7b
--	openhermes:mistral
-4.	CodeLlama Models:
--	codellama
--	codellama:13b
--	codellama:34b
+The application implements secure handling of API keys:
+- Keys are input through a password field
+- Keys are stored in session state
+- Environment variables are used for runtime configuration
+- No permanent storage of API keys
 
 ## 📸 Application Interface
 [Interface screenshot placeholder]
 
 ## 🎯 Output Screen
 
-![alt text](image-4.png)
+![alt text](image-6.png)
 
-![alt text](image-5.png)
+![alt text](image-7.png)
 
 ## Tracking and Debugging
 
-![alt text](image-2.png)
+![alt text](image-8.png)
 
-![alt text](image-1.png)
