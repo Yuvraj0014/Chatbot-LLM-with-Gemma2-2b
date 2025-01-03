@@ -67,7 +67,7 @@ streamlit run app.py
 ## Results 
 Access demo:
 ```
-querygenie.streamlit.app
+simple-chatbot-llm-with-gemma2-2b-and-ollama.streamlit.app
 ```
 
 ## 🚀 Getting Started
