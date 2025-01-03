@@ -153,9 +153,6 @@ The application implements secure handling of API keys:
 - No permanent storage of API keys
 
 ## 📸 Application Interface
-[Interface screenshot placeholder]
-
-## 🎯 Output Screen
 
 ![alt text](image-6.png)
 
