@@ -1,4 +1,4 @@
-# 🧞 QueryGenie: Intelligent Question Answering with LLMs
+# AI Question Answering App
 
 ## 🎯 About QueryGenie
 
