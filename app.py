@@ -39,7 +39,7 @@ def generate_response(question, engine, temperature, max_tokens):
     return answer
 
 # Main app interface
-st.title("🧞 QueryGenie: Intelligent Question Answering with LLMs ")
+st.title("AI Question Answering App ")
 
 # Model selection and parameters in sidebar
 st.sidebar.header("Model Configuration")
