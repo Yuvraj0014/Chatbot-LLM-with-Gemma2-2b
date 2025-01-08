@@ -1,8 +1,8 @@
 # AI Question Answering App
 
-## 🎯 About QueryGenie
+## 🎯 About AI Question Answering App
 
-QueryGenie is an advanced question-answering system powered by Large Language Models through Langchain and Ollama. It provides an intuitive interface for seamless interaction with AI models to receive intelligent, contextual responses, with secure API key management through the Streamlit interface.
+The AI Question Answering App is an advanced question-answering system powered by Large Language Models through Langchain and Ollama. It provides an intuitive interface for seamless interaction with AI models to receive intelligent, contextual responses, with secure API key management through the Streamlit interface.
 
 ### Key Features:
 - **Secure API Management**: In-app API key configuration
@@ -14,7 +14,7 @@ QueryGenie is an advanced question-answering system powered by Large Language Mo
 
 ## 🔍 Project Overview
 
-QueryGenie implements a sophisticated Q&A system using cutting-edge language models, combining advanced prompt engineering with robust model integration for accurate, contextual responses.
+The AI Question Answering App implements a sophisticated Q&A system using cutting-edge language models, combining advanced prompt engineering with robust model integration for accurate, contextual responses.
 
 ### 🛠️ Technical Architecture
 
@@ -161,4 +161,3 @@ The application implements secure handling of API keys:
 ## Tracking and Debugging
 
 ![alt text](image-8.png)
-
