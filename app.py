@@ -27,7 +27,7 @@ input_text = st.text_input("What question you have in your mind?")
 
 
 ## Ollama Llama2 model
-llm=Ollama(model="gemma2:2b")
+llm=Ollama(model="llama3.3")
 output_parser=StrOutputParser()
 chain=prompt|llm|output_parser
 
