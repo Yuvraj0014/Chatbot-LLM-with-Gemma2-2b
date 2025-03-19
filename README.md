@@ -48,6 +48,7 @@ Whether you're exploring AI-powered assistants or looking to integrate language 
 ```bash
 git clone https://github.com/Yuvraj0014/Chatbot-LLM-with-Gemma2-2b.git
 cd Chatbot-LLM-with-Gemma2-2b
+```
 
 2. Setup a virtual environment (optional but recommended)
 ```cmd
